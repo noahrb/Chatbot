@@ -140,6 +140,17 @@ public class ChatbotTest
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Stein"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("Johnson"));
 		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains("election"));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
+		assertTrue("Political Topic check", sampleBot.getPoliticalTopicList().contains(""));
 
 	}
 
