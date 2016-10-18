@@ -22,16 +22,16 @@ public class Chatbot
 	public Chatbot(String userName)
 	{
 		this.memesList = new ArrayList<String>();
+		this.userName = new String(username);
+		
 	}
 	
 	private void buildMemesList()
 	{
-		
 	}
 	
 	private void buildPoliticalTopicsList()
-	{
-		
+	{	
 	}
 	
 	/**
@@ -42,7 +42,14 @@ public class Chatbot
 	 */
 	public boolean lengthChecker(String currentInput)
 	{
-		return false;
+		boolean hasLength = false;
+		
+		if (currentInput != null && currentInput.length() > 0)
+		{
+			hasLength = true;
+		}
+		
+		return hasLength;
 	}
 	
 	/**
