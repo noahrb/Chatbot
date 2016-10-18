@@ -22,8 +22,8 @@ public class Chatbot
 	public Chatbot(String userName)
 	{
 		this.memesList = new ArrayList<String>();
-		this.userName = new String(username);
-		
+		this.userName = new String(userName);
+		this.content = new String("a;sldkfa");
 	}
 	
 	private void buildMemesList()
@@ -90,7 +90,7 @@ public class Chatbot
 	 */
 	public String getUserName()
 	{
-		return null;
+		return userName;
 	}
 	
 	/**
