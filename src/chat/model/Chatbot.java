@@ -1,19 +1,24 @@
 package chat.model;
 
 import java.util.ArrayList;
+import java.util.List;
+import popups.model.Thingy;
 
 /**
  * Base version of the 2015 Chatbot class. Only stub methods are provided. Students will complete methods as part
  * of the project.
  * @author Cody Henrichsen
  * @version 1.0 10/14/15
+ * @param <Meme>
  */
-public class Chatbot
+public class Chatbot<Meme>
 {
-	private ArrayList<String> memesList;
+	private List<Meme> memesList;
 	private ArrayList<String> politicalTopicList;
 	private String userName;
 	private String content;
+	
+	public ArrayList<String> getMemeList();
 	
 	/**
 	 * Creates an instance of the Chatbot with the supplied username.
@@ -21,7 +26,8 @@ public class Chatbot
 	 */
 	public Chatbot(String userName)
 	{
-		this.memesList = new ArrayList<String>();
+		memesList = new ArrayList<Meme>();
+		
 		this.politicalTopicList = new ArrayList<String>();
 		this.userName = userName;
 		this.content = new String("Sample");
@@ -32,7 +38,8 @@ public class Chatbot
 	
 	private void buildMemesList()
 	{
-		
+		Meme firstMeme = new Meme();
+		memesList.add(firstMeme);
 	}
 	
 	private void buildPoliticalTopicsList()
