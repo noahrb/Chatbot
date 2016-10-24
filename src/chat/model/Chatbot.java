@@ -24,7 +24,7 @@ public class Chatbot
 		this.memesList = new ArrayList<String>();
 		this.politicalTopicList = new ArrayList<String>();
 		this.userName = userName;
-		this.content = new String("Mexican Food");
+		this.content = new String("Sample");
 		this.buildMemesList();
 		buildPoliticalTopicsList();
 		
@@ -42,7 +42,7 @@ public class Chatbot
 	
 	private void buildContent()
 	{
-		this.content = content;
+		
 	}
 	
 	/**
@@ -72,7 +72,7 @@ public class Chatbot
 	{
 		boolean hasContent = false;
 		
-		if (currentInput != null && content.contains("sample"))
+		if (currentInput != null && currentInput.contains(content))
 		{
 			hasContent = true;
 		}
@@ -143,6 +143,6 @@ public class Chatbot
 	 */
 	public void setContent(String content)
 	{
-		content = "sample";
+		this.content = content;
 	}
 }
