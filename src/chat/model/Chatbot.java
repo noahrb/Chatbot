@@ -2,7 +2,6 @@ package chat.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import popups.model.Thingy;
 
 /**
  * Base version of the 2015 Chatbot class. Only stub methods are provided. Students will complete methods as part
@@ -11,35 +10,51 @@ import popups.model.Thingy;
  * @version 1.0 10/14/15
  * @param <Meme>
  */
-public class Chatbot<Meme>
+public class Chatbot
 {
-	private List<Meme> memesList;
+	private List<String> memesList;
 	private ArrayList<String> politicalTopicList;
 	private String userName;
 	private String content;
-	
-	public ArrayList<String> getMemeList();
 	
 	/**
 	 * Creates an instance of the Chatbot with the supplied username.
 	 * @param userName The username for the chatbot.
 	 */
 	public Chatbot(String userName)
-	{
-		memesList = new ArrayList<Meme>();
-		
+	{		
 		this.politicalTopicList = new ArrayList<String>();
+		this.memesList = new ArrayList<String>();
 		this.userName = userName;
 		this.content = new String("Sample");
 		this.buildMemesList();
-		buildPoliticalTopicsList();
+		this.buildPoliticalTopicsList();
 		
 	}
 	
 	private void buildMemesList()
 	{
-		Meme firstMeme = new Meme();
-		memesList.add(firstMeme);
+		memesList.add("doge");
+		memesList.add("pupper");
+		memesList.add("cute animals");
+		memesList.add("grumpy cat");
+		memesList.add("dat boi");
+		memesList.add("willy wonka");
+		memesList.add("harambe");
+		memesList.add("john cena");
+		memesList.add("doggo");
+		memesList.add("troll face");
+		memesList.add("drake");
+		memesList.add("ken bone");
+		memesList.add("vaporwave");
+		memesList.add("facepalm");
+		memesList.add("furries");
+		memesList.add("anime");
+		memesList.add("pen pineapple apple pen");
+		memesList.add("loss comic");
+		memesList.add("slender man");
+		memesList.add("pewdiepie");
+		memesList.add("bad luck brian");
 	}
 	
 	private void buildPoliticalTopicsList()
@@ -130,7 +145,7 @@ public class Chatbot<Meme>
 	 * Getter method for the memesList object.
 	 * @return The reference to the meme list.
 	 */
-	public ArrayList<String> getMemesList()
+	public List<String> getMemesList()
 	{
 		return memesList;
 	}
