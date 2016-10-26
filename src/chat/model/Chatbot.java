@@ -59,7 +59,30 @@ public class Chatbot
 	
 	private void buildPoliticalTopicsList()
 	{	
-		
+		politicalTopicList.add("Democrat");
+		politicalTopicList.add("Republican");
+		politicalTopicList.add("11/8/16");
+		politicalTopicList.add("liberal");
+		politicalTopicList.add("conservative");
+		politicalTopicList.add("Clinton");
+		politicalTopicList.add("Trump");
+		politicalTopicList.add("Kaine");
+		politicalTopicList.add("Pence");
+		politicalTopicList.add("Stein");
+		politicalTopicList.add("Johnson");
+		politicalTopicList.add("election");
+		politicalTopicList.add("James Falls");
+		politicalTopicList.add("Ken Bone");
+		politicalTopicList.add("Jim Fell");
+		politicalTopicList.add("Jimmy Fellen");
+		politicalTopicList.add("Misty K Snow");
+		politicalTopicList.add("Here come dat Garry Johnson");
+		politicalTopicList.add("nukes");
+		politicalTopicList.add("islamaphobia");
+		politicalTopicList.add("foreign policy");
+		politicalTopicList.add("United Nations");
+		politicalTopicList.add("UN");
+		politicalTopicList.add("America");
 	}
 	
 	private void buildContent()
