@@ -132,10 +132,18 @@ public class Chatbot
 	 */
 	public boolean politicalTopicChecker(String currentInput)
 	{
-		return false;
+		boolean hasTopic = false;
+		
+		for(int index = 0; index < politicalTopicList.size(); index++)
+		{
+			if(currentInput.equals(politicalTopicList.get(index)))
+			{
+				hasTopic = true;
+			}
+		}
+		return hasTopic;
 	}
-	
-	
+		
 	/**
 	 * Checks to see that the supplied String value is in the current memesList variable.
 	 * @param currentInput The supplied String to be checked.
@@ -143,7 +151,16 @@ public class Chatbot
 	 */
 	public boolean memeChecker(String currentInput)
 	{
-		return false;
+		boolean hasMeme = false;
+		
+		for(int index = 0; index < memesList.size(); index++)
+		{
+			if(currentInput.equals(memesList.get(index)))
+			{
+				hasMeme = true;
+			}
+		}
+		return hasMeme;
 	}
 	
 	/**
@@ -179,7 +196,7 @@ public class Chatbot
 	 */
 	public ArrayList<String> getPoliticalTopicList()
 	{
-		return null;
+		return politicalTopicList;
 	}
 	
 	/**
