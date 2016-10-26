@@ -65,6 +65,7 @@ public class Chatbot
 		politicalTopicList.add("liberal");
 		politicalTopicList.add("conservative");
 		politicalTopicList.add("Clinton");
+		politicalTopicList.add("Hillary");
 		politicalTopicList.add("Trump");
 		politicalTopicList.add("Kaine");
 		politicalTopicList.add("Pence");
