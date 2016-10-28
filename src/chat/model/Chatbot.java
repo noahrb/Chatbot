@@ -118,7 +118,10 @@ public class Chatbot
 	{
 		boolean hasContent = false;
 		
-		if (currentInput != null && currentInput.contains(content))
+		String temp = "↷";
+		System.out.println(temp + temp.toLowerCase());
+		
+		if (currentInput.toLowerCase().contains(content.toLowerCase()))
 		{
 			hasContent = true;
 		}
