@@ -41,6 +41,10 @@ public class ChatbotController
 		{
 			answer += "\nI love politics!\n";
 		}
+		if(stupidBot.inputHTMLChecker(input))
+		{
+			answer += "\nHTML IS LAMMMEEEEE\n";
+		}
 		if(input.length() == 0)
 		{
 			answer += "Sorry, I don't know about " + input;

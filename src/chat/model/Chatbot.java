@@ -26,6 +26,7 @@ public class Chatbot
 	{		
 		this.politicalTopicList = new ArrayList<String>();
 		this.memesList = new ArrayList<String>();
+		this.HTMLList = new ArrayList<String>();
 		this.userName = userName;
 		this.content = new String("Sample");
 		this.buildMemesList();
@@ -181,6 +182,21 @@ public class Chatbot
 		return hasMeme;
 	}
 	
+	public boolean inputHTMLChecker(String currentInput)
+	{
+		boolean hasHTML = false;
+		
+		for(int index = 0; index < HTMLList.size(); index++)
+		{
+			if(currentInput.equals(HTMLList.get(index)))
+			{
+				hasHTML = true;
+			}
+		}
+		return hasHTML;
+	}
+
+	
 	/**
 	 * Returns the username of this Chatbot instance.
 	 * @return The username of the Chatbot.
@@ -226,16 +242,4 @@ public class Chatbot
 		this.content = content;
 	}
 
-	public boolean inputHTMLChecker(String currentInput)
-	{
-		boolean hasHTML = false;
-		for(int index = 0; index < HTMLList.size(); index++)
-		{
-			if(currentInput.equals(HTMLList.get(index)))
-			{
-				hasHTML = true;
-			}
-		}
-		return false;
-	}
 }
