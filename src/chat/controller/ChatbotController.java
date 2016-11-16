@@ -25,7 +25,7 @@ public class ChatbotController
 		}
 	}
 	
-	private String useChatbotCheckers(String input)
+	public String useChatbotCheckers(String input)
 	{
 		String answer = "";
 		
@@ -42,6 +42,11 @@ public class ChatbotController
 			answer += "\nI love politics!\n";
 		}
 		if(input.length() == 0)
+		{
+			answer += "Sorry, I don't know about " + input;
+		}
+		
+		if(!stupidBot.lengthChecker(answer))
 		{
 			answer += "Sorry, I don't know about " + input;
 		}
