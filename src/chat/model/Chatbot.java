@@ -14,6 +14,7 @@ public class Chatbot
 {
 	private List<String> memesList;
 	private ArrayList<String> politicalTopicList;
+	private ArrayList<String> HTMLList;
 	private String userName;
 	private String content;
 	
@@ -29,6 +30,7 @@ public class Chatbot
 		this.content = new String("Sample");
 		this.buildMemesList();
 		this.buildPoliticalTopicsList();
+		this.buildHTMLList();
 		
 	}
 	
@@ -84,6 +86,18 @@ public class Chatbot
 		politicalTopicList.add("United Nations");
 		politicalTopicList.add("UN");
 		politicalTopicList.add("America");
+	}
+	
+	private void buildHTMLList()
+	{
+		HTMLList.add("<>");
+		HTMLList.add("< >");
+		HTMLList.add("<B> </B>");
+		HTMLList.add("<B> ");
+		HTMLList.add("<I> sdadas </i>");
+		HTMLList.add("<P>");
+		HTMLList.add("<A HREF=\"sdfs.html\"> </a>");
+		HTMLList.add("<A HREF> </a>");
 	}
 	
 	private void buildContent()
@@ -210,5 +224,18 @@ public class Chatbot
 	public void setContent(String content)
 	{
 		this.content = content;
+	}
+
+	public boolean inputHTMLChecker(String currentInput)
+	{
+		boolean hasHTML = false;
+		for(int index = 0; index < HTMLList.size(); index++)
+		{
+			if(currentInput.equals(HTMLList.get(index)))
+			{
+				hasHTML = true;
+			}
+		}
+		return false;
 	}
 }
