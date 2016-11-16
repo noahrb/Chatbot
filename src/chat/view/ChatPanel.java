@@ -21,6 +21,9 @@ public class ChatPanel extends JPanel
 		baseLayout = new SpringLayout();
 		chatDisplay = new JTextArea(5, 25);
 		chatField = new JTextField(25);
+<<<<<<< HEAD
+		chatButton = new JButton("Chat with the Bot");
+=======
 		baseLayout.putConstraint(SpringLayout.SOUTH, chatField, -174, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, chatDisplay, 32, SpringLayout.SOUTH, chatField);
 		baseLayout.putConstraint(SpringLayout.EAST, chatDisplay, 0, SpringLayout.EAST, chatField);
@@ -29,6 +32,7 @@ public class ChatPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -6, SpringLayout.NORTH, chatField);
 		baseLayout.putConstraint(SpringLayout.EAST, chatButton, -148, SpringLayout.EAST, this);
 		
+>>>>>>> master
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -45,7 +49,16 @@ public class ChatPanel extends JPanel
 	
 	private void setupLayout()
 	{
+<<<<<<< HEAD
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -6, SpringLayout.NORTH, chatField);
+		baseLayout.putConstraint(SpringLayout.EAST, chatButton, -148, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatField, -174, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, chatDisplay, 32, SpringLayout.SOUTH, chatField);
+		baseLayout.putConstraint(SpringLayout.EAST, chatDisplay, 0, SpringLayout.EAST, chatField);
+		baseLayout.putConstraint(SpringLayout.WEST, chatField, 65, SpringLayout.WEST, this);
+=======
 		
+>>>>>>> master
 	}
 	
 	private void setupListeners()
@@ -58,6 +71,10 @@ public class ChatPanel extends JPanel
 				String botResponse = baseController.useChatbotCheckers(userWords);
 				
 				chatDisplay.setText("You said: " + userWords + "\n" + "Chatbot said: " + botResponse);
+<<<<<<< HEAD
+				chatField.setText("");
+=======
+>>>>>>> master
 			}
 		});
 	}
