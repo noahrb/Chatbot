@@ -23,7 +23,7 @@ public class Chatbot
 	 * @param userName The username for the chatbot.
 	 */
 	public Chatbot(String userName)
-	{		
+	{
 		this.politicalTopicList = new ArrayList<String>();
 		this.memesList = new ArrayList<String>();
 		this.HTMLList = new ArrayList<String>();
@@ -100,6 +100,7 @@ public class Chatbot
 		HTMLList.add("<A HREF=\"sdfs.html\"> </a>");
 		HTMLList.add("<A HREF> </a>");
 	}
+	
 	
 	private void buildContent()
 	{
