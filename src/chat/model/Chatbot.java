@@ -12,7 +12,13 @@ import java.util.List;
  */
 public class Chatbot
 {
+	/**
+	 * The list of memes. 
+	 */
 	private List<String> memesList;
+	/**
+	 * The list of political topics.
+	 */
 	private ArrayList<String> politicalTopicList;
 	private ArrayList<String> HTMLList;
 	private String userName;
