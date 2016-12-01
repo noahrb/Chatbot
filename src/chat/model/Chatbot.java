@@ -188,7 +188,11 @@ public class Chatbot
 		}
 		return hasMeme;
 	}
-	
+	/**
+	 * Checks to see if the currentInput has html information or tags
+	 * @param currentInput
+	 * @return
+	 */
 	public boolean inputHTMLChecker(String currentInput)
 	{
 		boolean hasHTML = false;
@@ -202,17 +206,42 @@ public class Chatbot
 		}
 		return hasHTML;
 	}
-
-	
 	/**
-	 * Returns the username of this Chatbot instance.
-	 * @return The username of the Chatbot.
+	 * Checks the currentInput for twitter tags or username
+	 * @param currentInput
+	 * @return
 	 */
+	public boolean twitterChecker(String currentInput)
+	{
+		boolean twitterCheckerOn = false;
+		String sample = currentInput.replaceAll(" ", "");
+		if(sample.length() > 1&& !currentInput.startsWith(" "))
+		{
+			twitterCheckerOn = true;
+		}
+		return twitterCheckerOn;
+	}
+	/**
+	 * Checks to see if the currentInput is asking to exit, and exits if present. 
+	 * @param currentInput
+	 * @return
+	 */
+	public boolean quitChecker(String currentInput)
+	{
+		boolean assertQuit = false;
+		
+		if(currentInput.equalsIgnoreCase("Quit") || currentInput.equalsIgnoreCase("Exit"));
+		{
+			assertQuit = true;
+		}
+		return assertQuit;
+	}
+	
+
 	public String getUserName()
 	{
 		return userName;
 	}
-	
 	/**
 	 * Returns the content area for this Chatbot instance.
 	 * @return The content area for this Chatbot instance.
