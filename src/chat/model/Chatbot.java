@@ -263,9 +263,13 @@ public class Chatbot
 	{
 		boolean assertQuit = false;
 		
-		if(currentInput.equalsIgnoreCase("quit") || currentInput.equalsIgnoreCase("exit"));
+		if(currentInput.equalsIgnoreCase("Quit"))
 		{
 			assertQuit = true;
+		}
+		else if(currentInput.equalsIgnoreCase("Exit"))
+		{
+			assertQuit = false;
 		}
 		return assertQuit;
 	}
