@@ -195,17 +195,50 @@ public class Chatbot
 	 */
 	public boolean inputHTMLChecker(String currentInput)
 	{
-		boolean hasHTML = false;
+		boolean htmlPresent = false; 
 		
-		for(int index = 0; index < HTMLList.size(); index++)
+		if(currentInput.contains("<P>"))
 		{
-			if(currentInput.equals(HTMLList.get(index)))
+			htmlPresent = true;
+		}
+		else if(currentInput.contains("<A HREF=\""))
+		{
+			int index = currentInput.indexOf("<A HREF=\"") + 9;
+			String sub = currentInput.substring(index);
+			
+			if(sub.contains("\">"))
 			{
-				hasHTML = true;
+				int index2 = sub.indexOf("\">");
+				String sub2 = sub.substring(index2);
+				
+				if(sub2.contains(" </a>"))
+				{
+					htmlPresent = true;
+				}
 			}
 		}
-		return hasHTML;
+		else if(currentInput.contains("<"))
+		{
+			String lower = currentInput.toLowerCase();
+			int openIndex1 = lower.indexOf("<") + 1;
+			String tag = "";
+			if(lower.contains(">"))
+			{
+				int openIndex2 = lower.indexOf(">");
+				tag = lower.substring(openIndex1, openIndex2);
+				
+				String sub = lower.substring(openIndex2 + 1);
+				
+				if(sub.contains("</" + tag + ">"))
+				{
+					htmlPresent = true;
+				}
+			}
+		}
+		return htmlPresent;
 	}
+	
+	
 	/**
 	 * Checks the currentInput for twitter tags or username
 	 * @param currentInput
@@ -230,14 +263,19 @@ public class Chatbot
 	{
 		boolean assertQuit = false;
 		
-		if(currentInput.equalsIgnoreCase("Quit") || currentInput.equalsIgnoreCase("Exit"));
+		if(currentInput.equalsIgnoreCase("quit") || currentInput.equalsIgnoreCase("exit"));
 		{
 			assertQuit = true;
 		}
 		return assertQuit;
 	}
 	
-
+	//GETTERS-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * Getter method for UserName object.
+	 * @return
+	 */
 	public String getUserName()
 	{
 		return userName;
@@ -273,6 +311,9 @@ public class Chatbot
 	 * Updates the content area for this Chatbot instance.
 	 * @param content The updated value for the content area.
 	 */
+	
+	//SETTERS-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
 	public void setContent(String content)
 	{
 		this.content = content;
