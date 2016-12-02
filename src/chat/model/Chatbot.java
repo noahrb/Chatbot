@@ -40,7 +40,9 @@ public class Chatbot
 		this.buildHTMLList();
 		
 	}
-	
+	/**
+	 * 
+	 */
 	private void buildMemesList()
 	{
 		memesList.add("doge");
@@ -107,12 +109,10 @@ public class Chatbot
 		HTMLList.add("<A HREF> </a>");
 	}
 	
-	
 	private void buildContent()
 	{
 	
 	}
-	
 	/**
 	 * Checks the length of the supplied string. Returns false if the supplied String is empty or null,
 	 * otherwise returns true. 
@@ -130,7 +130,6 @@ public class Chatbot
 		
 		return hasLength;
 	}
-	
 	/**
 	 * Checks if the supplied String matches the content area for this Chatbot instance.
 	 * @param currentInput The supplied String to be checked.
@@ -149,7 +148,6 @@ public class Chatbot
 		}
 		return hasContent;
 	}
-	
 	/**
 	 * Checks if supplied String matches ANY of the topics in the politicalTopicsList. Returns
 	 * true if it does find a match and false if it does not match.
@@ -169,7 +167,6 @@ public class Chatbot
 		}
 		return hasTopic;
 	}
-		
 	/**
 	 * Checks to see that the supplied String value is in the current memesList variable.
 	 * @param currentInput The supplied String to be checked.
@@ -237,8 +234,6 @@ public class Chatbot
 		}
 		return htmlPresent;
 	}
-	
-	
 	/**
 	 * Checks the currentInput for twitter tags or username
 	 * @param currentInput
@@ -273,9 +268,23 @@ public class Chatbot
 		}
 		return assertQuit;
 	}
+	/**
+	 * Checks currentInput for keyboard mashing
+	 * @param currentInput
+	 * @return boolean to determine if mashing is present
+	 */
+	public boolean keyboardMashChecker(String currentInput)
+	{
+		boolean keyboardMash = false;
+		
+		if (currentInput.equalsIgnoreCase("sdf") || currentInput.equalsIgnoreCase("dfg") || currentInput.equalsIgnoreCase("cvb") || currentInput.equalsIgnoreCase(",./"))
+		{
+			keyboardMash = true;
+		}
+		return keyboardMash;
+	}
 	
 	//GETTERS-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	/**
 	 * Getter method for UserName object.
 	 * @return
@@ -292,7 +301,6 @@ public class Chatbot
 	{
 	return content;
 	}
-	
 	/**
 	 * Getter method for the memesList object.
 	 * @return The reference to the meme list.
@@ -301,7 +309,6 @@ public class Chatbot
 	{
 		return memesList;
 	}
-	
 	/**
 	 * Getter method for the politicalTopicList object.
 	 * @return The reference to the political topic list.
@@ -310,14 +317,12 @@ public class Chatbot
 	{
 		return politicalTopicList;
 	}
-	
 	/**
 	 * Updates the content area for this Chatbot instance.
 	 * @param content The updated value for the content area.
 	 */
 	
 	//SETTERS-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	public void setContent(String content)
 	{
 		this.content = content;
