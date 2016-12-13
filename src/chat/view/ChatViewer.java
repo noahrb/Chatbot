@@ -5,12 +5,12 @@ import javax.swing.ImageIcon;
 
 public class ChatViewer
 {
-	private String windowMessage;
+	private String title;
 	private ImageIcon chatIcon;
 	
 	public ChatViewer()
 	{
-		windowMessage = "Sample Window Text";
+		title = "Sample Window Text";
 		chatIcon = new ImageIcon(getClass().getResource("images/chatbot.png"));
 	}
 	
@@ -18,7 +18,7 @@ public class ChatViewer
 	{
 		String response = "";
 		
-		response = JOptionPane.showInputDialog(null, question, windowMessage,
+		response = JOptionPane.showInputDialog(null, question, title,
 				JOptionPane.INFORMATION_MESSAGE, chatIcon, null, 
 				"Type here please!").toString();
 		
@@ -36,6 +36,6 @@ public class ChatViewer
 	
 	public void displayMessage(String message)
 	{
-		JOptionPane.showMessageDialog(null, message, windowMessage, JOptionPane.PLAIN_MESSAGE, chatIcon);
+		JOptionPane.showMessageDialog(null, message, title, JOptionPane.PLAIN_MESSAGE, chatIcon);
 	}
 }

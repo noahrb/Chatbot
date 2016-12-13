@@ -7,23 +7,28 @@ import java.awt.Dimension;
 public class ChatFrame extends JFrame
 {
 	private ChatbotController baseController;
-	private ChatPanel basePanel;
+	private ChatPanel chatPanel;
 	
 	public ChatFrame(ChatbotController baseController)
 	{
 		super();
 		this.baseController = baseController;
-		basePanel = new ChatPanel(baseController);
+		this.chatPanel = new ChatPanel(baseController);
 		
-		setupFrame();
+		this.setupFrame();
 	}
 	
 	private void setupFrame()
 	{
-		this.setContentPane(basePanel);
+		this.setContentPane(chatPanel);
 		this.setTitle("CHATBOT");
 		this.setSize(new Dimension(600,400));
 		this.setResizable(false);
 		this.setVisible(true);
+	}
+	
+	public ChatPanel getChatPanel()
+	{
+		return this.chatPanel;
 	}
 }

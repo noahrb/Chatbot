@@ -1,29 +1,25 @@
 package chat.controller;
 
 import chat.model.Chatbot;
+import chat.view.ChatFrame;
 import chat.view.ChatViewer;
 
 public class ChatbotController
 {
 	private Chatbot stupidBot;
 	private ChatViewer chatView;
+	private ChatFrame chatFrame;
 	
 	public ChatbotController()
 	{
 		stupidBot = new Chatbot("Boaty McBoatFace");
 		chatView = new ChatViewer();
-	// baseFrame = new ChatFrame(this);
+	    chatFrame = new ChatFrame(this);
 	}
 	
 	public void start()
 	{
-		String response = chatView.collectResponse("What do you want to talk about today???");
-		
-		while(stupidBot.lengthChecker(response))
-		{
-			chatView.displayMessage(useChatbotCheckers(response));
-			response = chatView.collectResponse("Oh, you are interested in " + response);
-		}
+		chatFrame.getChatPanel().showMessage(stupidBot.getUserName() + " says: Welcome!");
 	}
 	
 	public String useChatbotCheckers(String input)
@@ -61,14 +57,24 @@ public class ChatbotController
 			int canBeRandom = (int) (Math.random() * 7);
 			if (canBeRandom % 7 == 0)
 			{
-				answer += randomTopicGenerator();
+					//answer += randomTopicGenerator();
 			}	
 	}
-	else
-	{
-		chatView.displayMessage("Thanks for chatting with meeeee");
-		System.exit(0);
-	}	
+		else
+		{
+			chatView.displayMessage("Thanks for chatting with meeeee");
+			System.exit(0);
+		}	
 	return answer;
+	}
+	
+	public ChatFrame getBaseFrame() 
+	{
+		return chatFrame;
+	}
+	
+	public Chatbot getChatbot() 
+	{
+		return this.stupidBot;
 	}
 }
