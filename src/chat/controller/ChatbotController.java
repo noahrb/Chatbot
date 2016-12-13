@@ -10,6 +10,9 @@ public class ChatbotController
 	private ChatViewer chatView;
 	private ChatFrame chatFrame;
 	
+	/**
+	 * Constructs a new chatbot, view, and frame object.
+	 */
 	public ChatbotController()
 	{
 		stupidBot = new Chatbot("Boaty McBoatFace");
@@ -17,11 +20,19 @@ public class ChatbotController
 	    chatFrame = new ChatFrame(this);
 	}
 	
+	/**
+	 * Displays message to the startup of the program.
+	 */
 	public void start()
 	{
 		chatFrame.getChatPanel().showMessage(stupidBot.getUserName() + " says: Welcome!");
 	}
 	
+	/**
+	 * Checks for input that the chatbot knows how to respond to and can exit the program.
+	 * @param the user input
+	 * @return a string that has a message depending on input.
+	 */
 	public String useChatbotCheckers(String input)
 	{
 		String answer = "";
@@ -68,11 +79,19 @@ public class ChatbotController
 	return answer;
 	}
 	
+	/**
+	 * get the main GUI Frame
+	 * @return the chatFrame
+	 */
 	public ChatFrame getBaseFrame() 
 	{
 		return chatFrame;
 	}
 	
+	/**
+	 * Gets the main ChatBot.
+	 * @return the main chatBot
+	 */
 	public Chatbot getChatbot() 
 	{
 		return this.stupidBot;

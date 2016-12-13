@@ -41,7 +41,7 @@ public class Chatbot
 		
 	}
 	/**
-	 * 
+	 * adds memes to the memesList
 	 */
 	private void buildMemesList()
 	{
@@ -68,6 +68,9 @@ public class Chatbot
 		memesList.add("bad luck brian");
 	}
 	
+	/**
+	 * Adds political topics to politicalTopicList
+	 */
 	private void buildPoliticalTopicsList()
 	{	
 		politicalTopicList.add("Democrat");
@@ -97,22 +100,6 @@ public class Chatbot
 		politicalTopicList.add("America");
 	}
 	
-	private void buildHTMLList()
-	{
-		HTMLList.add("<>");
-		HTMLList.add("< >");
-		HTMLList.add("<B> </B>");
-		HTMLList.add("<B> ");
-		HTMLList.add("<I> sdadas </i>");
-		HTMLList.add("<P>");
-		HTMLList.add("<A HREF=\"sdfs.html\"> </a>");
-		HTMLList.add("<A HREF> </a>");
-	}
-	
-	private void buildContent()
-	{
-	
-	}
 	/**
 	 * Checks the length of the supplied string. Returns false if the supplied String is empty or null,
 	 * otherwise returns true. 
@@ -188,7 +175,7 @@ public class Chatbot
 	/**
 	 * Checks to see if the currentInput has html information or tags
 	 * @param currentInput
-	 * @return
+	 * @return a boolean containing the checked value.
 	 */
 	public boolean inputHTMLChecker(String currentInput)
 	{
@@ -237,7 +224,7 @@ public class Chatbot
 	/**
 	 * Checks the currentInput for twitter tags or username
 	 * @param currentInput
-	 * @return
+	 * @return returns boolean containing checked value
 	 */
 	public boolean twitterChecker(String currentInput)
 	{
@@ -252,7 +239,7 @@ public class Chatbot
 	/**
 	 * Checks to see if the currentInput is asking to exit, and exits if present. 
 	 * @param currentInput
-	 * @return
+	 * @return returns boolean contianing checked value
 	 */
 	public boolean quitChecker(String currentInput)
 	{
@@ -323,6 +310,10 @@ public class Chatbot
 	 */
 	
 	//SETTERS-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	/**
+	 * updates the content area for this chatbot instance
+	 * @param content The updated value for the content area
+	 */
 	public void setContent(String content)
 	{
 		this.content = content;
