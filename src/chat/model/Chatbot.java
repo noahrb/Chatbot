@@ -20,7 +20,6 @@ public class Chatbot
 	 * The list of political topics.
 	 */
 	private ArrayList<String> politicalTopicList;
-	private ArrayList<String> HTMLList;
 	private String userName;
 	private String content;
 	
@@ -32,12 +31,10 @@ public class Chatbot
 	{
 		this.politicalTopicList = new ArrayList<String>();
 		this.memesList = new ArrayList<String>();
-		this.HTMLList = new ArrayList<String>();
 		this.userName = userName;
 		this.content = new String("Sample");
 		this.buildMemesList();
 		this.buildPoliticalTopicsList();
-		this.buildHTMLList();
 		
 	}
 	/**
